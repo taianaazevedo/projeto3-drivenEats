@@ -52,10 +52,9 @@ function escolherDoce(botao3){
     botao3.classList.toggle('selecionado');
 
     const nome = document.querySelector('.sobremesa .selecionado .nome-doce').innerHTML;
-    nomeBebida = nome;
+    nomeDoce = nome;
     const valor = document.querySelector('.sobremesa .selecionado .valor').innerHTML;
-    valorBebida = Number(valor.replace('R$ ','').replace(',','.'));
-
+    valorDoce = Number(valor.replace('R$ ','').replace(',','.'));
 
     doceEscolhido = botao3.innerHTML;
 
@@ -63,19 +62,32 @@ function escolherDoce(botao3){
 }
 
 function fecharPedido(){
-    // const valorTotal = valorPrato + bebda + sobremesa //number
-    // const valorTotal = 
-    // const valortTotalFormatado = valorTotal.toString().replace('.',',')
-    // const texto = `Vc escolher o prato:${nomePrato} com o valorTotal:${valorTotal}`
-    // console.log(valortTotalFormatado)
-
     if(pratoEscolhido !== undefined && bebidaEscolhida !== undefined && doceEscolhido !== undefined){
                 const botaoFechar = document.querySelector('.botao');
                 botaoFechar.classList.add('escondido'); 
                 botaoFechar.innerHTML = "Fechar Pedido";
                     
         }
+
+    const valorTotal = valorPrato + valorBebida + valorDoce //number
+    const valorTotalCompleto = valorTotal.toFixed(2).toString().replace('.',',');
+    
+    console.log(valorTotalCompleto);
+    
+    const texto = `Olá, gostaria de fazer o pedido: \n
+    - Prato: ${nomePrato} \n
+    - Bebida: ${nomeBebida} \n
+    - Sobremesa: ${nomeDoce} \n
+     Total: R$ ${valorTotalCompleto}`;
+
+    console.log(texto);
+    
+
 }
+
+    
+
+    
 
 
 
