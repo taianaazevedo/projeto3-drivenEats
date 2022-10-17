@@ -46,10 +46,11 @@ div .prato{
     height:216px;
     background-color: #FFFFFF;
     border-radius:10px; 
-    box-sizing: border-box;       
+          
 }
+
 div .selecionado {
-    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius:10px;
     border-width: 5px;
     border-style: solid;
@@ -106,7 +107,7 @@ div .bebida{
     height:216px;
     background-color: #FFFFFF;
     border-radius:10px;   
-    box-sizing: border-box;  
+     
 }
 
 .sobremesa{
@@ -119,7 +120,7 @@ div .doce {
     height:216px;
     background-color: #FFFFFF;
     border-radius:10px;  
-    box-sizing: border-box;    
+       
 }
 
 .fecharPedido {
@@ -146,4 +147,7 @@ div .doce {
     font-family: 'Roboto', sans-serif;
     text-align:center;
        
+}
+.escondido {
+    background-color:#32B72F;
 }
