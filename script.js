@@ -71,15 +71,19 @@ function fecharPedido(){
 
 }
 function mensagem(){
-    const valorTotal = valorPrato + valorBebida + valorDoce //number
-    
+    const valorTotal = valorPrato + valorBebida + valorDoce //number    
     const valorTotalCompleto = valorTotal.toFixed(2).toString().replace('.',',');
+    const nomeCliente = prompt("Qual seu nome?");
+    const enderecoCliente = prompt("Qual seu endereço?")
+    
      
     const texto = `Olá, gostaria de fazer o pedido: \n
     - Prato: ${nomePrato} \n
     - Bebida: ${nomeBebida} \n
     - Sobremesa: ${nomeDoce} \n
-     Total: R$ ${valorTotalCompleto}`;
+     Total: R$ ${valorTotalCompleto} \n
+     - Nome: ${nomeCliente} \n
+     - Endereço: ${enderecoCliente}` 
 
      const encodedmsg = encodeURIComponent(texto);
      const site = `https://wa.me/5521979782885?text=${encodedmsg}`;
