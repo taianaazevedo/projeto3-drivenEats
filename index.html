@@ -45,6 +45,13 @@
                         <p class="valor">R$ 14,90</p>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
+                    <div class="prato aipim" onclick="escolherPrato(this)">
+                        <img src="./imagens/mandioca_frita.jpg">                        
+                        <h1 class="nome-prato">Aipim Frito</h1>
+                        <h2>Aipim frito com manteiga</h2>
+                        <p class="valor">R$ 15,90</p>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
                     <div class="prato batata" onclick="escolherPrato(this)">
                         <img src="./imagens/batata frita.png">                        
                         <h1 class="nome-prato">Batata Frita</h1>
@@ -71,6 +78,13 @@
                         <p class="valor">R$ 6,90</p>
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
+                    <div class="bebida acaiCamp" onclick="escolherBebida(this)">
+                        <img src="./imagens/acai_camp1.jpg">                        
+                        <h1 class="nome-bebida">Açaí Camp - 300ml</h1>
+                        <h2>Ele, o maior e melhor de todos</h2>
+                        <p class="valor">R$ 2,90</p>
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                    </div>
                     <div class="bebida suco" onclick="escolherBebida(this)">
                         <img src="./imagens/suquinho 1.png">                        
                         <h1 class="nome-bebida">Suquinho - 300ml</h1>
@@ -94,7 +108,14 @@
                     <img src="./imagens/brownie.jpg">                        
                     <h1 class="nome-doce">Brownie Divino </h1>
                     <h2>Brownie com chocolate 70%</h2>
-                    <p class="valor">R$ 8,90</p>
+                    <p class="valor">R$ 5,90</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </div>
+                <div class="doce mousse" onclick="escolherDoce(this)">
+                    <img src="./imagens/mousse de maracuja.jpg">                        
+                    <h1 class="nome-doce">Mousse de Maracujá</h1>
+                    <h2>Mousse de maracujá com chocolate</h2>
+                    <p class="valor">R$ 7,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
                 <div class="doce pudim" onclick="escolherDoce(this)">
@@ -115,14 +136,14 @@
                     <img src="./imagens/bolo de pote 1.png">                        
                     <h1 class="nome-doce">Bolo no Pote</h1>
                     <h2>Para adoçar o dia</h2>
-                    <p class="valor">R$ 7,90</p>
+                    <p class="valor">R$ 4,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>          
         </div>
         <!-- fechar pedido -->
-        <div class="fecharPedido" onclick="fecharPedido()">            
-              <button class="botao" onclick="mensagem()">Selecione os 3 itens para fechar o pedido</button>            
+        <div class="fecharPedido" onclick="fecharPedido()"> 
+            <button class="botao" onclick="mensagem()">Selecione os 3 itens para fechar o pedido</button>            
           </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

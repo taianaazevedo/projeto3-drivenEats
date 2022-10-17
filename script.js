@@ -62,11 +62,10 @@ function escolherDoce(botao3){
 }
 
 function fecharPedido(){
-    if(pratoEscolhido !== undefined && bebidaEscolhida !== undefined && doceEscolhido !== undefined){
-                const botaoFechar = document.querySelector('.fecharPedido .botao');
-                botaoFechar.classList.add('escondido'); 
-                botaoFechar.innerHTML = "Fechar Pedido";
-                    
+        if(pratoEscolhido !== undefined && bebidaEscolhida !== undefined && doceEscolhido !== undefined){
+            const botaoFechar = document.querySelector('.fecharPedido .botao');
+            botaoFechar.classList.add('escondido'); 
+            botaoFechar.innerHTML = "Fechar Pedido";                  
         }
 
 }
@@ -81,9 +80,10 @@ function mensagem(){
     - Prato: ${nomePrato} \n
     - Bebida: ${nomeBebida} \n
     - Sobremesa: ${nomeDoce} \n
-     Total: R$ ${valorTotalCompleto} \n
-     - Nome: ${nomeCliente} \n
-     - Endereço: ${enderecoCliente}` 
+    Total: R$ ${valorTotalCompleto} \n
+    \n
+    - Nome: ${nomeCliente} \n
+    - Endereço: ${enderecoCliente}` 
 
      const encodedmsg = encodeURIComponent(texto);
      const site = `https://wa.me/5521979782885?text=${encodedmsg}`;
