@@ -63,26 +63,28 @@ function escolherDoce(botao3){
 
 function fecharPedido(){
     if(pratoEscolhido !== undefined && bebidaEscolhida !== undefined && doceEscolhido !== undefined){
-                const botaoFechar = document.querySelector('.botao');
+                const botaoFechar = document.querySelector('.fecharPedido .botao');
                 botaoFechar.classList.add('escondido'); 
                 botaoFechar.innerHTML = "Fechar Pedido";
                     
         }
 
+}
+function mensagem(){
     const valorTotal = valorPrato + valorBebida + valorDoce //number
+    
     const valorTotalCompleto = valorTotal.toFixed(2).toString().replace('.',',');
-    
-    console.log(valorTotalCompleto);
-    
+     
     const texto = `Olá, gostaria de fazer o pedido: \n
     - Prato: ${nomePrato} \n
     - Bebida: ${nomeBebida} \n
     - Sobremesa: ${nomeDoce} \n
      Total: R$ ${valorTotalCompleto}`;
 
-    console.log(texto);
-    
+     const encodedmsg = encodeURIComponent(texto);
+     const site = `https://wa.me/5521979782885?text=${encodedmsg}`;
 
+     window.open(site,"_blank");
 }
 
     
